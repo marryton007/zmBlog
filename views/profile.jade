@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	.container
+		.page-header.text-center
+			h1
+				span.fa.fa-anchor Profile Page
+			a.btn.btn-default-btn-sm(href="/logout") Logout
+		.row
+			.col-sm-6
+				.well
+					h3
+						span.fa.fa-user Local
+						if user.local.email
+							p
+								strong id: 
+									span #{user._id}
+									br
+								strong email: 
+									span #{user.local.email}
+									br
+								strong password:
+									span #{user.local.password}
+									br
+					
+		
